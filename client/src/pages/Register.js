@@ -20,6 +20,7 @@ const Register = () => {
     setValues({
       ...values,
       isMember: !values.isMember,
+      
     });
   };
   const handleChange = (e) => {
