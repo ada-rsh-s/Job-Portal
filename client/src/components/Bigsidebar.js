@@ -1,5 +1,4 @@
 import { useAppContext } from "../context/appContext.js";
-import NavLinks from "./Navlinks";
 import Logo from "../components/Logo";
 import Wrapper from "../assets/wrappers/BigSidebar";
 import Navlinks from "./Navlinks";

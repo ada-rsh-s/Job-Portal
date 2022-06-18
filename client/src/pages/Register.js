@@ -92,7 +92,11 @@ const Register = () => {
         />
         {/* Password input */}
         <button type="submit" disabled={isLoading} className="btn btn-block">
-          {values.isMember ? "Login" : "Register"}
+          {isLoading
+            ? "Please Wait 🌞"
+            : values.isMember
+            ? "Login"
+            : "Register"}
         </button>
         <p>
           {values.isMember ? "Not a member yet ? " : "Already a member ? "}
