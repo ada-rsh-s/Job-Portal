@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <Logo/>
+        <Logo />
       </nav>
 
       <div className="container page">
@@ -15,14 +15,14 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-            impedit amet saepe consequuntur consequatur deleniti obcaecati
-            asperiores quaerat, quas voluptates distinctio? Laudantium totam a,
-            ipsam ducimus, soluta culpa placeat rerum aut dolorum voluptatum
-            eveniet. Quis eum, quo quod repudiandae vel repellat eius dicta
-            officiis velit quia quas fugiat aut delectus.
+            Welcome to our job portal, where we connect job seekers with their
+            dream jobs and employers with the best talent. Explore
+            opportunities, track your applications, and take the next step in
+            your career with us.
           </p>
-          <Link to='/register' className="btn btn-hero">Login/Register</Link>
+          <Link to="/register" className="btn btn-hero">
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt="" className="img main-img" />
       </div>

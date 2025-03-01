@@ -29,9 +29,11 @@ const Register = () => {
       isMember: !values.isMember,
     });
   };
+
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+
   const onSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, isMember } = values;
@@ -54,6 +56,7 @@ const Register = () => {
       });
     }
   };
+  
   useEffect(() => {
     if (user) {
       setTimeout(() => {
