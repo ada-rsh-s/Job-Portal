@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "install": "pnpm install && cd client && pnpm install",
-    "server": "cross-env NODE_ENV=development nodemon --quiet --watch server.js server.js",
-    "client": "cd client && pnpm start",
-    "keepawake": "node keep-awake.js",
-    "start": "concurrently --kill-others-on-fail \"pnpm run server\" \"pnpm run client\" \"pnpm run keepawake\""
-  },
+"scripts": {
+  "postbuild": "pnpm install && cd client && pnpm install",
+  "server": "cross-env NODE_ENV=development nodemon --quiet --watch server.js server.js",
+  "client": "cd client && pnpm start",
+  "keepawake": "node keep-awake.js",
+  "start": "concurrently --kill-others-on-fail \"pnpm run server\" \"pnpm run client\" \"pnpm run keepawake\""
+}
+,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Adarsh-S1/Job-Portal.git"
