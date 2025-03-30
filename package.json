@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "install": "pnpm install && cd client && pnpm install",
     "server": "cross-env NODE_ENV=development nodemon --quiet --watch server.js server.js",
     "client": "cd client && pnpm start",
     "keepawake": "node keep-awake.js",
