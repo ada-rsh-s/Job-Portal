@@ -39,6 +39,7 @@
     "moment": "^2.30.1",
     "mongoose": "^8.11.0",
     "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2",
     "passport": "^0.7.0",
     "validator": "^13.12.0"
   },
