@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-"scripts": {
-  "postbuild": "pnpm install && cd client && pnpm install",
-  "server": "cross-env NODE_ENV=development nodemon --quiet --watch server.js server.js",
-  "client": "cd client && pnpm start",
-  "keepawake": "node keep-awake.js",
-  "start": "concurrently --kill-others-on-fail \"pnpm run server\" \"pnpm run client\" \"pnpm run keepawake\""
-}
-,
+  "scripts": {
+    "build-client": "cd client && pnpm run build",
+    "install-client": "cd client && pnpm install",
+    "build": "pnpm install && pnpm run install-client && pnpm run build-client",
+    "server": "nodemon server --ignore client & node keep-awake.js",
+    "client": "pnpm start --prefix client",
+    "start": "concurrently  --kill-others-on-fail \"pnpm run server\" \"pnpm run client\""
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Adarsh-S1/Job-Portal.git"
@@ -25,7 +25,6 @@
   "homepage": "https://github.com/Adarsh-S1/Job-Portal#readme",
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "cross-env": "^7.0.3",
     "nodemon": "^3.1.9"
   },
   "dependencies": {
@@ -33,16 +32,13 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-async-errors": "^3.1.1",
-    "express-mongo-sanitize": "^2.2.0",
     "express-rate-limit": "^7.5.0",
     "fs": "0.0.1-security",
-    "helmet": "^8.0.0",
     "http-status-codes": "^2.3.0",
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.30.1",
     "mongoose": "^8.11.0",
     "morgan": "^1.10.0",
-    "node-fetch": "^3.3.2",
     "passport": "^0.7.0",
     "validator": "^13.12.0"
   },
