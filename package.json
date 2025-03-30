@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "build-client": "cd client && pnpm run build",
-    "install-client": "cd client && npm install",
-    "postbuild": "pnpm install && pnpm run install-client && pnpm run build-client",
-    "server": "nodemon server --ignore client",
-    "client": "pnpm start --prefix client",
-    "keepawake": "nodemon ./keep-awake.js",
-    "start": "concurrently --kill-others-on-fail \"pnpm run server\" \"pnpm run client\" \"pnpm run keepawake\""
-  },
+"scripts": {
+  "build-client": "cd client && pnpm run build",
+  "install-client": "cd client && pnpm install",
+  "postbuild": "pnpm install && pnpm run install-client && pnpm run build-client",
+  "server": "nodemon server --ignore client",
+  "client": "cd client && pnpm start",
+  "keepawake": "node keep-awake.js",
+  "start": "concurrently --kill-others-on-fail \"pnpm run server\" \"pnpm run client\" \"pnpm run keepawake\""
+},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Adarsh-S1/Job-Portal.git"
@@ -42,6 +43,7 @@
     "moment": "^2.30.1",
     "mongoose": "^8.11.0",
     "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2",
     "passport": "^0.7.0",
     "validator": "^13.12.0"
   },

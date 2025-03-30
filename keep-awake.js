@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-const URL = "https://e-classroom.onrender.com/";
+const URL = "https://job-portal-tuni.onrender.com";
 
 const pingServer = () => {
   fetch(URL)
