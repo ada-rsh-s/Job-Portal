@@ -5,13 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build-client": "cd client && npm run build",
+    "build-client": "cd client && pnpm run build",
     "install-client": "cd client && npm install",
-    "postbuild": "npm install && npm run install-client && npm run build-client",
+    "postbuild": "pnpm install && pnpm run install-client && pnpm run build-client",
     "server": "nodemon server --ignore client",
-    "client": "npm start --prefix client",
+    "client": "pnpm start --prefix client",
     "keepawake": "nodemon ./keep-awake.js",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" \"npm run keepawake\""
+    "start": "concurrently --kill-others-on-fail \"pnpm run server\" \"pnpm run client\" \"pnpm run keepawake\""
   },
   "repository": {
     "type": "git",
