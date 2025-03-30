@@ -7,10 +7,11 @@
   "scripts": {
     "build-client": "cd client && npm run build",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm install && npm run install-client && npm run build-client",
+    "postbuild": "npm install && npm run install-client && npm run build-client",
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
-    "start": "concurrently  --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "keepawake": "nodemon ./keep-awake.js",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" \"npm run keepawake\""
   },
   "repository": {
     "type": "git",
